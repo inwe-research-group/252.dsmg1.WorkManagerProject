@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.mysyncapp.data.dao.SyncItemDao
 import com.example.mysyncapp.data.entity.SyncItem
 
-@Database(entities = [SyncItem::class], version = 1)
+@Database(entities = [SyncItem::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun syncItemDao(): SyncItemDao
 

@@ -9,7 +9,9 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitClient {
     //private const val BASE_URL = "http://192.168.1.87:8082/"
-    private const val BASE_URL = "http://10.64.255.10:8082/"
+    //private const val BASE_URL = "http://10.64.255.10:8082/"
+    private const val BASE_URL = "http://10.61.151.18:8082/"
+
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }

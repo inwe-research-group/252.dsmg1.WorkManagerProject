@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
@@ -51,9 +51,9 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
 
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.7.0")
+    implementation("androidx.room:room-ktx:2.7.0")
+    ksp("androidx.room:room-compiler:2.7.0")
 
     implementation ("androidx.work:work-runtime-ktx:2.8.1")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -73,8 +73,5 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
-/*Kotlin Annotation Processing Tool y sirve para ejecutar procesadores
-*de anotaciones escritos originalmente para Java dentro de un proyecto Kotlin.*/
-kapt {
-    correctErrorTypes = true
-}
+/*KSP (Kotlin Symbol Processing) es el reemplazo moderno de kapt.
+*Es compatible con Kotlin 2.0+ y hasta 2x más rápido que kapt.*/
